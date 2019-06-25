@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-class Pictures extends StatelessElement{
-  List <String> pictures;
-  Pictures(pictures)
+
+class Pictures extends StatelessWidget{
+  final List <String> pictures;
+
+  Pictures(this.pictures);
   
   @override
   Widget build(BuildContext context){
     return Column(
-      children: _pictures
+      children: pictures
           .map(
             (element) => Card(
           child: Column(
@@ -18,7 +20,7 @@ class Pictures extends StatelessElement{
         ),
       )
           .toList(),
-    )
+    );
   }
 }
 
