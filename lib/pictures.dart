@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 class Pictures extends StatelessWidget{
   final List <String> pictures;
 
-  Pictures(this.pictures);
+  Pictures([this.pictures = const []]){
+    print ('Picture Widget Constructor');
+
+  }
   
   @override
   Widget build(BuildContext context){
+    print ('Picture Widget build');
     return Column(
       children: pictures
           .map(
