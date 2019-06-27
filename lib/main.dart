@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-
+/* for debug UI
+import 'package:flutter/rendering.dart';
+*/
 import './picture_manager.dart';
 
 void main() => runApp(MyApp());
 
+/* for debug UI
+void main() {
+  debugPaintSizeEnabled= true;
+  runApp(MyApp();
+
+}
+*/
 class MyApp extends StatelessWidget {
 
   @override

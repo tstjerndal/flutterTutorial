@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:course1/picture_control.dart';
 import './pictures.dart';
 
 class PictureManager extends StatefulWidget {
@@ -32,23 +33,20 @@ class _PictureManagerState extends State<PictureManager> {
     super.didUpdateWidget(oldWidget);
   }
 
+  void _addPictures(String picture){
+    setState(() {
+      _pictures.add(picture);
+      print(_pictures);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     print ('PictureManager didUpdateWidget');
     return Column(children: [
       Container(
         margin: EdgeInsets.all(10.0),
-        child: RaisedButton(
-          color: Theme.of(context).primaryColor,
-
-          onPressed: () {
-            setState(() {
-              _pictures.add('Advanced picture');
-              print(_pictures);
-            });
-          },
-          child: Text('Add picture'),
-        ),
+        child: PictureControl(_addPictures),
       ),
       Pictures(_pictures)
     ],);

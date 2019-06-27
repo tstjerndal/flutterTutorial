@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './picture_control.dart';
 
 class Pictures extends StatelessWidget{
   final List <String> pictures;
